@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/jwt": "^10.0.0",
+    "@fastify/multipart": "^10.0.0",
     "@types/adm-zip": "^0.5.8",
     "adm-zip": "^0.5.17",
     "canvas": "^3.2.3",
