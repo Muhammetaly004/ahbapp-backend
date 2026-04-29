@@ -11,7 +11,8 @@ import path from 'path';
 
 const { Client } = pg;
 const db = new Client({
-  connectionString: "postgresql://postgres:ahbap@localhost/library_dev",
+  connectionString: process.env.DATABASE_URL || "postgresql://postgres:ahbap@localhost/library_dev",
+  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false
 });
 await db.connect();
 
